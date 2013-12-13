@@ -6,24 +6,13 @@ The SEC-SDK contains classes required by the "SEC - Protocol Manager". It also c
 
 Generating the jar file
 -----------------------
+Make sure that you have the RMP's [JSON](https://github.com/runmyprocess/json/) library installed on your local mvn repo.
+
 To generate the jar file simply download the source code and run :
 
 	mvn clean install
-
-You can also add the project as a maven dependency on your project. To do this, simply add the project mvn-repo branch as a repository on your maven pom.mxl file:
-
-	<repositories>
-	        <repository>
-	            <id>json-mvn-repo</id>
-	            <url>https://raw.github.com/runmyprocess/sec-sdk/mvn-repo/</url>
-	            <snapshots>
-	                <enabled>true</enabled>
-	                <updatePolicy>always</updatePolicy>
-	            </snapshots>
-	        </repository>
-	</repositories>
 	
-You can then add your project's dependency:
+You can then add the library to your project as a maven dependency:
 
 	<dependency>
 		<groupId>org.runmyprocess</groupId>
